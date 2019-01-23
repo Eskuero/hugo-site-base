@@ -1,0 +1,21 @@
+<!DOCTYPE html> 
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+		<head>
+				{{ partial "head.html" . }}
+		</head>
+		<body>
+				<div class="content">
+						<h1>Eskuero's blog</h1>
+						{{ $paginator := .Paginate (where .Data.Pages "Section" "!=" "") }}
+						{{ range $paginator.Pages }}
+						<article>
+								<span class="date">{{ .Date.Format "Jan 2, 2006" }}</span>
+								<a class="title" href="{{ .Permalink }}">{{ .Title }}</a>
+								<p>{{ .Summary }}</p>
+						</article>
+						{{ end }}
+						{{ template "_internal/pagination.html" . }}
+				</div>
+				{{ partial "sidebar.html" . }}
+		</body>
+</html>

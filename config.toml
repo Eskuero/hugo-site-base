@@ -1,0 +1,7 @@
+baseURL = ""
+languageCode = "en-us"
+title = "Eskuero's blog"
+MetaDataFormat = "toml"
+summaryLength = "50"
+paginate = "3"
+disableLiveReload = true

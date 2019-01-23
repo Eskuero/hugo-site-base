@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+        <head>
+				<title>🥑 Projects</title>
+				<meta name="viewport" content="width=device-width">
+				<link rel="stylesheet" type="text/css" href="/css/style.css">
+				<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+				<style>
+						.flexible {
+								display: flex;
+								text-align: initial;
+						}
+						.flexible > * {
+								flex-grow: 1;
+						}
+						@media screen and (orientation:portrait) {
+								.flexible {
+										flex-direction: column;
+								}
+						}
+				</style>
+		</head>
+        <body>
+				<div class="content">
+						<h1>Projects</h1>
+						<h3>Android community distributions</h3>
+						<p>I have contributed code to Android ROMs maintained by the community like CyanogenMod, it's successor <a href="https://review.lineageos.org/q/owner:3skuero%2540gmail.com+status:merged" target="_blank">LineageOS</a> and <a href="https://gerrit.omnirom.org/#/q/owner:%22Oliver+Garcia+Albertos%22+status:merged" target="_blank">OmniROM</a>. Unfortunately after CyanogenMod disbanded most of the old commits were archived from their gerrit, so there's no easy way to retrieving all of them.</p>
+						<p>The most relevant ones, related to support for multimedia codecs from Novathor chipsets, are linked below:<p>
+						<ul>
+								<li><a href="https://github.com/LineageOS/android_frameworks_native/commit/35c7cd72f91eedc77ab693ebb94121bdd57cc22c" target="_blank">native: Add missing changes for multimedia on STE devices</a></li>
+								<li><a href="https://github.com/LineageOS/android_frameworks_av/commit/d8f7a185d0c541edcc229a21fce3661becdbab59" target="_blank"> av: Missing changes for STE OMX multimedia</a></li>
+						</ul>
+						<p>All of this was done in the context of maintaining unofficial builds for my devices:<p>
+						<div class="flexible">
+								<details>
+										<summary>Samsung Galaxy S3 Mini</summary>
+										<ul>
+												<li><a target="_blank" href="https://github.com/Eskuero?tab=repositories&q=golden">Device git repositories</a></li>
+												<li><a target="_blank" href="https://forum.xda-developers.com/showthread.php?t=2176244">CyanogenMod 10</a></li>
+												<li><a target="_blank" href="https://forum.xda-developers.com/showthread.php?t=2384232">CyanogenMod 10.1</a></li>
+												<li><a target="_blank" href="https://forum.xda-developers.com/showthread.php?t=2491332">CyanogenMod 10.2</a></li>
+										</ul>
+								</details>
+                                <details>
+                                        <summary>Samsung Galaxy S4 Mini</summary>
+                                        <ul>
+												<li><a target="_blank" href="https://github.com/Eskuero?tab=repositories&q=serranoltexx">Device git repositories</a></li>
+												<li><a target="_blank" href="https://forum.xda-developers.com/galaxy-s4-mini/development/rom-omnirom-gt-i9195-t2807263">OmniROM 4.4</a></li> 
+												<li><a target="_blank" href="https://forum.xda-developers.com/showthread.php?t=2589011">TWRP Recovery</a></li>
+                                        </ul>
+                                </details>
+                                <details>
+                                        <summary>Motorola Moto X Play</summary> 
+                                        <ul>
+												<li><a target="_blank" href="https://github.com/Eskuero/patches_lineageos">Debloated device patches</a></li>
+												<li><a target="_blank" href="https://forum.xda-developers.com/moto-x-play/development/rom-barebones-lineageos-14-1-t3634188">Barebones LineageOS 14.1</a></li> 
+                                        </ul>
+                                </details>
+						</div>
+						<h3>Syncall: Gradle automatizer</h3>
+						<p>Syncall is a python program to automatize the syncing, building, signing and deployment of your open source mobile applications using git, gradle and android system tools.</p>
+						<p>It allows granular configuration for each project, like which gradle tasks are assembled, which keystores are used for signing and what devices are deploy targets. You can get a feel of how it works and read the code by yourself on the <a href="https://github.com/eskuero/syncall" target="_blank">GitHub repository</a>.</p>
+						<h3>Webextension: Collapsed Mastodon</h3>
+						<p><a href="https://joinmastodon.org" target="_blank">Mastodon</a> is a distributed social network. A default user interface is provided as a web app, however certain things like the fixed drawer waste a lot of space.</p>
+						<p>This webextension collapses every useless container and integrates the reply boxes in the timelines in a TweetDeck style, all while keeping support for navigation through keybidings. It can be installed for Firefox from the <a href="https://addons.mozilla.org/en-US/firefox/addon/collapsed-mastodon/" target="_blank">AMO</a> and for Chromium by following the instructions on the <a href="https://github.com/Eskuero/collapsed_mastodon#chrome" target="_blank">GitHub repository</a>.</p>
+						<h3>Other cool things</h3>
+						<p>Although not as big and useful as the previously mentioned ones I've also done some other work.</p>
+						<details>
+							<summary>Expand to see a list</summary>
+								<div class="flexible">
+										<ul>
+												<li><a target="_blank" href="https://projectpokemon.org/home/forums/topic/37619-dump-online-battle-videos-from-codes/">Hexadecimal research of N3DS RAM</a></li>
+												<li><a href="https://gist.github.com/search?q=user%3Aeskuero+tweet">Mitigate doxxing on Twitter</a></li>
+										</ul>
+										<ul>
+												<li><a href="https://github.com/Eskuero/pyfzf-launcher">Fzf wrapper as launcher</a></li>
+												<li><a target="_blank" href="https://github.com/kwsch/PKHeX/commits?author=Eskuero">Logic fixes on Savegame Editor</a></li>	
+										</ul>
+										<ul>
+												<li><a target="_blank" href="https://github.com/Eskuero/tunnel_manager">Helper script for SSH tunnels as forwarders</a></li>
+										</ul>
+								</div>
+						</details>
+						<br />
+				</div>
+				{{ partial "sidebar.html" . }}
+        </body>    
+</html>
+
